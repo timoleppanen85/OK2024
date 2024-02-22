@@ -12,6 +12,8 @@ function submit(event) {
         "password": password_input.value
     }
 
+    document.getElementById("form").reset();
+
     login(user);
 }
 
