@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craps</title>
+    <link rel="stylesheet" href="index.css" id="css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div>
+            <label for="pass">Pass</label>
+            <input type="radio" id="pass" name="bet" value="pass" checked>
+            <label for="nopass">Don't pass</label>
+            <input type="radio" id="nopass" name="bet" value="nopass">
+        </div>
+        <div>Dice 1: <span id="dice1">1</span></div>
+        <div>Dice 2: <span id="dice2">1</span></div>
+        <div>
+            <button id="rolldice" onclick="rollDice()">Roll dice</button>
+        </div>
+        <div id="total"></div>
+    </div>
+</body>
+
+</html>
