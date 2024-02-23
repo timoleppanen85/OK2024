@@ -10,19 +10,36 @@
 </head>
 
 <body>
-    <div class="content">
+    <div class="flex-container">
         <div>
-            <label for="pass">Pass</label>
-            <input type="radio" id="pass" name="bet" value="pass" checked>
-            <label for="nopass">Don't pass</label>
-            <input type="radio" id="nopass" name="bet" value="nopass">
+            <div>
+                <label for="pass">Pass</label>
+                <input type="radio" id="pass" name="bet" value="true" checked>
+                <label for="nopass">Don't pass</label>
+                <input type="radio" id="nopass" name="bet" value="false">
+            </div>
+            <div>Dice 1: <span id="dice1">1</span></div>
+            <div>Dice 2: <span id="dice2">1</span></div>
+            <div>
+                <button id="rolldice" onclick="rollDice()">Roll dice</button>
+            </div>
+            <div id="total">Total</div>
+            <div id="wintext">wintext</div>
         </div>
-        <div>Dice 1: <span id="dice1">1</span></div>
-        <div>Dice 2: <span id="dice2">1</span></div>
-        <div>
-            <button id="rolldice" onclick="rollDice()">Roll dice</button>
+        <div class="money">
+            <div>
+                Total money:
+                <label id="totalmoney">100€</label>
+            </div>
+            <div>
+                <input type="range" id="betamountslider" name="betamountslider" value="20" min="1" max="50"
+                    oninput="changeBet()"></button>
+            </div>
+            <div>
+                Current bet:
+                <label id="betlabel" for="betamountslider">20€</label>
+            </div>
         </div>
-        <div id="total"></div>
     </div>
 </body>
 
