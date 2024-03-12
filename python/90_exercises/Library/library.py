@@ -44,8 +44,13 @@ def list_books(books):
         if len(book.author) < 8:
             author_tabs = 2
 
-        print("%.40s" % book.name, "\t"*name_tabs, "%.15s" % book.author, "\t"*author_tabs,
-              book.pages, "\t", "%.15s" % book.genre, "\t", ("Not available", "Available")[book.available])
+        print("%.40s" % book.name,
+              "\t"*name_tabs,
+              "%.15s" % book.author,
+              "\t"*author_tabs,
+              book.pages, "\t",
+              "%.15s" % book.genre,
+              "\t", ("Not available", "Available")[book.available])
         name_tabs = 1
         author_tabs = 1
 
