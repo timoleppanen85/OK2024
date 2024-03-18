@@ -13,7 +13,7 @@ def result():
     if request.method == "POST":
         result = request.form
         print(result)
-        return render_template("result.html")
+        return render_template("result.html", result=result)
 
 
 app.run("127.0.0.1", port=8080)
