@@ -11,7 +11,7 @@ const getInitialState = () => {
         return {
             list: [],
             loading: false,
-            islogged: false,
+            isLogged: false,
             error: "",
             token: "",
             user: "",
@@ -42,7 +42,7 @@ const shoppingReducer = (state, action) => {
         case actionConstants.LOGIN_SUCCESS:
             tempState = {
                 ...state,
-                islogged: true,
+                isLogged: true,
                 token: action.token,
             };
             saveToStorage(tempState);
@@ -50,7 +50,7 @@ const shoppingReducer = (state, action) => {
         case actionConstants.LOGOUT_SUCCESS:
             tempState = {
                 list: [],
-                islogged: false,
+                isLogged: false,
                 loading: false,
                 token: "",
                 error: "",
@@ -61,7 +61,7 @@ const shoppingReducer = (state, action) => {
         case actionConstants.LOGOUT_FAILED:
             tempState = {
                 list: [],
-                islogged: false,
+                isLogged: false,
                 loading: false,
                 token: "",
                 error: action.error,
